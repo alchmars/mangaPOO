@@ -12,9 +12,3 @@ RUN chmod 777 mvnw
 RUN ./mvnw package -DskipTests
 
 CMD ["sh","-c","java -jar target/*.jar"]
-
-Depois disso dê um commit no teu projeto
-
-git add .
-git commit -m "Dockerfile"
-git push origin main
