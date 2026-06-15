@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/mangap2}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:POSTzac23}
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema-postgresql.sql
+      continue-on-error: true

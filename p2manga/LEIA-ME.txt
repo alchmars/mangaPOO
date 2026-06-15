@@ -1,0 +1,32 @@
+Olá Isaac Games, aqui vai o tutorial pra fazer esse site rodar:
+
+1 - Abra o pgAdmin ou o PostgreSQL pelo terminal e crie o banco de dados:
+
+"CREATE DATABASE mangap2"
+
+
+2 - A tabela será criada automaticamente quando rodar o site.
+
+Mas caso aconteça algo é só criar manualmente:
+
+"CREATE TABLE manga (
+    id SERIAL PRIMARY KEY,
+    nomeManga VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    nota DECIMAL(3,1),
+    estadomanga VARCHAR(50)
+);
+"
+
+3 - Vá dentro da pasta do projeto, vá até src/main/resources/application.yml, e nesse arquivo altere essa parte:
+
+password: root //Troque "root" pela sua senha do banco de dados.
+
+
+
+4 - Daí é só rodar o projeto pelo VSCode, ou pelo terminal.
+
+
+
+5 - Neymar
