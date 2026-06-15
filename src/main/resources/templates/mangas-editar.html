@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CÃO CHUPANDO MANGÁ - Editar Mangá</title>
     
     <!-- FAVICON com link online -->
@@ -34,7 +35,7 @@
             padding: 2rem;
         }
 
-        /* Container do formulário - igual ao auth-card */
+        /* Container do formulário */
         .form-container {
             background: #141417;
             border-radius: 20px;
@@ -162,16 +163,98 @@
             background: #3a3a42;
         }
 
+        /* ===== RESPONSIVIDADE ===== */
+        /* Tablet (telas médias) */
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+            .form-container {
+                padding: 1.5rem;
+                max-width: 90%;
+            }
+            h2 {
+                font-size: 1.4rem;
+                margin-bottom: 1.2rem;
+            }
+            .form-control, .form-select {
+                padding: 0.6rem 0.9rem;
+                font-size: 0.9rem;
+            }
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Celular (≤480px) */
         @media (max-width: 480px) {
-            .logo { height: 40px; }
-            h2 { font-size: 1.3rem; }
+            body {
+                padding: 1rem;
+            }
+            .form-container {
+                padding: 1.2rem;
+                border-radius: 16px;
+            }
+            .logo {
+                height: 40px;
+                margin-bottom: 0.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+            }
+            .form-label {
+                font-size: 0.85rem;
+            }
+            .form-control, .form-select {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.85rem;
+            }
+            .row {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .col {
+                min-width: auto;
+            }
+            .btn-container {
+                flex-direction: column;
+                gap: 0.8rem;
+                margin-top: 1.5rem;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Celular muito pequeno (≤360px) */
+        @media (max-width: 360px) {
+            body {
+                padding: 0.8rem;
+            }
+            .form-container {
+                padding: 1rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+            .form-control, .form-select {
+                padding: 0.4rem 0.7rem;
+                font-size: 0.8rem;
+            }
+            .btn {
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <div class="form-container">
-    <!-- LOGO DO SITE -->
     <img src="https://i.postimg.cc/FKQJ771J/favicon-cao.png" alt="Cão Chupando Mangá" class="logo">
     
     <h2>📝 Editar Mangá</h2>
